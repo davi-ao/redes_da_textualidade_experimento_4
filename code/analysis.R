@@ -70,4 +70,4 @@ indices = list(indices_biomed,
   bind_rows()
 
 indices %>%
-  write.xlsx('./results/experiment4_cohesion_indices.xlsx')
+  write_csv('./results/experiment4_cohesion_indices.csv')
