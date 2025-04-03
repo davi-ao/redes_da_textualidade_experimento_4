@@ -22,6 +22,9 @@ data = list('results/journal_slate/',
   bind_rows() %>%
   as_tibble()
 
+data %>%
+  write_csv('results/experiment4_data.csv')
+
 tokens = data %>%
   filter(upos %in% c('ADJ', 'ADV', 'NOUN', 'NUM', 'PROPN', 'VERB')) %>%
   distinct(stem) %>%
@@ -258,6 +261,9 @@ segments_edge_p = segments %>%
       bind_rows()
   }) %>%
   bind_rows()
+
+segments_edge_p %>%
+  write_csv('results/experiment4_segments_edge_p.csv')
 
 segments_edge_p_stats = segments_edge_p %>%
   summarise(N = n(),
