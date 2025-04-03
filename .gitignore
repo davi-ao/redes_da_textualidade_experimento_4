@@ -47,3 +47,4 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+results/experiment4_data.csv
